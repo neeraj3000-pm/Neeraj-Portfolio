@@ -134,3 +134,55 @@ if (trackedSections.length && navLinks.length) {
 
   trackedSections.forEach((section) => observer.observe(section));
 }
+
+// ============ SCROLL-TRIGGERED REVEALS ============
+const revealEls = document.querySelectorAll('.reveal');
+
+if (revealEls.length) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach((el) => revealObserver.observe(el));
+}
+
+// ============ STAT COUNT-UP ============
+const countEls = document.querySelectorAll('[data-count]');
+
+if (countEls.length) {
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCount(entry.target);
+        countObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  countEls.forEach((el) => countObserver.observe(el));
+}
+
+function animateCount(el) {
+  const target = parseInt(el.getAttribute('data-count'), 10);
+  const suffix = el.getAttribute('data-suffix') || '';
+  const duration = 1200;
+  const startTime = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - startTime) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(target * eased);
+    el.textContent = current.toLocaleString() + suffix;
+    if (progress < 1) {
+      requestAnimationFrame(tick);
+    } else {
+      el.textContent = target.toLocaleString() + suffix;
+    }
+  }
+  requestAnimationFrame(tick);
+}
