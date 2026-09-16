@@ -33,11 +33,10 @@ if (themeToggle) {
     html.setAttribute('data-theme', next);
     saveTheme(next);
 
-    if (next === 'light') {
-      showToast('WASTED', "Can't handle the dark side.");
-    } else {
-      showToast('MISSION PASSED!', 'Went to the dark side.');
+    if (next === 'dark') {
+      showToast('ACHIEVEMENT UNLOCKED', 'Welcome to the dark side.');
     }
+    // switching to light: no toast, just switches quietly
   });
 }
 
