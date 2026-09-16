@@ -1,0 +1,137 @@
+// ============ THEME TOGGLE ============
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+const toast = document.getElementById('achievementToast');
+const toastTitle = document.getElementById('toastTitle');
+const toastText = document.getElementById('toastText');
+
+// Load saved theme (in-memory for this session, since artifacts can't use localStorage —
+// but this is a real static site, so localStorage works fine once deployed)
+function getSavedTheme() {
+  try {
+    return localStorage.getItem('theme');
+  } catch (e) {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem('theme', theme);
+  } catch (e) { /* ignore if unavailable */ }
+}
+
+const savedTheme = getSavedTheme();
+if (savedTheme) {
+  html.setAttribute('data-theme', savedTheme);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    saveTheme(next);
+
+    if (next === 'light') {
+      showToast('WASTED', "Can't handle the dark side.");
+    } else {
+      showToast('MISSION PASSED!', 'Went to the dark side.');
+    }
+  });
+}
+
+function showToast(title, message) {
+  if (!toast) return;
+  toastTitle.textContent = title;
+  toastText.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(showToast._timer);
+  showToast._timer = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3200);
+}
+
+// ============ TYPEWRITER SUBTITLE ============
+const typewriterEl = document.getElementById('typewriter');
+
+if (typewriterEl) {
+  const phrases = ['Product manager by day.'];
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let deleting = false;
+
+  const TYPE_SPEED = 55;
+  const DELETE_SPEED = 30;
+  const PAUSE_AFTER_TYPE = 2200;
+  const PAUSE_AFTER_DELETE = 500;
+
+  function tick() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (!deleting) {
+      charIndex++;
+      typewriterEl.textContent = currentPhrase.slice(0, charIndex);
+
+      if (charIndex === currentPhrase.length) {
+        if (phrases.length > 1) {
+          deleting = true;
+          setTimeout(tick, PAUSE_AFTER_TYPE);
+        }
+        // if only one phrase, just stop typing (cursor keeps blinking)
+        return;
+      }
+      setTimeout(tick, TYPE_SPEED);
+    } else {
+      charIndex--;
+      typewriterEl.textContent = currentPhrase.slice(0, charIndex);
+
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(tick, PAUSE_AFTER_DELETE);
+        return;
+      }
+      setTimeout(tick, DELETE_SPEED);
+    }
+  }
+
+  tick();
+}
+
+// ============ SCROLL PROGRESS BAR ============
+const scrollProgress = document.getElementById('scrollProgress');
+
+function updateScrollProgress() {
+  if (!scrollProgress) return;
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  scrollProgress.style.width = pct + '%';
+}
+
+window.addEventListener('scroll', updateScrollProgress, { passive: true });
+updateScrollProgress();
+
+// ============ ACTIVE NAV LINK ON SCROLL ============
+const trackedSections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a[data-section]');
+
+if (trackedSections.length && navLinks.length) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach((link) => {
+            link.classList.toggle('active', link.getAttribute('data-section') === id);
+          });
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -50% 0px', threshold: 0 }
+  );
+
+  trackedSections.forEach((section) => observer.observe(section));
+}
