@@ -1,21 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Anton&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap');
 /* ============ DESIGN TOKENS ============ */
 :root {
   /* Dark mode (default) */
-  --bg: #0a0a0a;
-  --surface: #160a0a;
-  --surface-hover: #1e0d0d;
+  --bg: #17181b;
+  --surface: #1e2024;
+  --surface-hover: #262930;
   --text: #f2f0ec;
-  --text-muted: #8c8c90;
-  --border: #2a1414;
+  --text-muted: #9a9ca3;
+  --border: #2f323a;
   --red: #e3272c;
   --red-dim: #7a1418;
 
   --font-display: 'Space Grotesk', sans-serif;
   --font-body: 'IBM Plex Sans', sans-serif;
   --font-mono: 'IBM Plex Mono', monospace;
-  --font-arcade: 'Anton', sans-serif;
+  --font-arcade: 'Press Start 2P', monospace;
 
   --max-width: 780px;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -611,13 +610,13 @@ footer {
 
 .toast-title {
   font-family: var(--font-arcade);
-  font-size: 1.8rem;
-  letter-spacing: 0.03em;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
   color: var(--red);
   text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
   display: block;
-  line-height: 1;
-  margin-bottom: 6px;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
 .toast-desc {
