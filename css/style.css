@@ -169,7 +169,8 @@ body { padding-top: 96px; }
 
 /* ============ HERO ============ */
 .hero {
-  padding: 100px 0 80px;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 .hero-eyebrow {
@@ -743,7 +744,7 @@ footer {
     font-size: 0.82rem;
   }
   body { padding-top: 78px; }
-  .hero { padding: 40px 0 56px; }
+  .hero { padding-top: 40px; padding-bottom: 56px; }
   .resume-header { flex-direction: column; align-items: flex-start; }
 }
 
