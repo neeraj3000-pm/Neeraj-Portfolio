@@ -164,6 +164,8 @@ body { padding-top: 96px; }
 .nav-logo span { color: var(--red); }
 
 .theme-toggle {
+  -webkit-appearance: none;
+  appearance: none;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 100px;
@@ -173,6 +175,7 @@ body { padding-top: 96px; }
   cursor: pointer;
   padding: 0;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .toggle-thumb {
