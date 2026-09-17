@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap');
 /* ============ DESIGN TOKENS ============ */
 :root {
-  /* Dark mode (default) */
+  /* Dark mode (fallback values, overridden by [data-theme="light"] which is now default) */
   --bg: #17181b;
   --surface: #1e2024;
   --surface-hover: #262930;
