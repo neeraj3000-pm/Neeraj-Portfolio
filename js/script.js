@@ -99,6 +99,54 @@ if (typewriterEl) {
   tick();
 }
 
+// ============ MOBILE NAV COLLAPSE ON SCROLL ============
+const nav = document.querySelector('.nav');
+const navExpandBtn = document.getElementById('navExpandBtn');
+const navLinkEls = document.querySelectorAll('.nav-links a');
+const NAV_COLLAPSE_THRESHOLD = 120;
+
+function isMobileNav() {
+  return window.matchMedia('(max-width: 640px)').matches;
+}
+
+let navManualExpand = false;
+
+function updateNavCollapse() {
+  if (!nav) return;
+  if (!isMobileNav()) {
+    nav.classList.remove('nav-collapsed');
+    return;
+  }
+  const pastThreshold = window.scrollY > NAV_COLLAPSE_THRESHOLD;
+  nav.classList.toggle('nav-collapsed', pastThreshold && !navManualExpand);
+}
+
+if (nav) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY <= NAV_COLLAPSE_THRESHOLD) {
+      navManualExpand = false;
+    }
+    updateNavCollapse();
+  }, { passive: true });
+
+  window.addEventListener('resize', updateNavCollapse);
+
+  if (navExpandBtn) {
+    navExpandBtn.addEventListener('click', () => {
+      navManualExpand = true;
+      updateNavCollapse();
+    });
+  }
+
+  navLinkEls.forEach((link) => {
+    link.addEventListener('click', () => {
+      navManualExpand = false;
+    });
+  });
+
+  updateNavCollapse();
+}
+
 // ============ SCROLL PROGRESS BAR ============
 const scrollProgress = document.getElementById('scrollProgress');
 
