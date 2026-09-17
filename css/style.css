@@ -804,31 +804,34 @@ footer {
     max-width: calc(100vw - 24px);
   }
   .nav-inner {
-    padding: 10px 10px 10px 18px;
-    gap: 12px;
+    padding: 8px 8px 8px 14px;
+    gap: 6px;
+  }
+  .nav-logo {
+    font-size: 1rem;
   }
   .nav-links {
-    gap: 12px;
-    font-size: 0.82rem;
+    gap: 6px;
+    font-size: 0.68rem;
   }
   body { padding-top: 78px; }
   .hero { padding-top: 40px; padding-bottom: 56px; }
   .resume-header { flex-direction: column; align-items: flex-start; }
 
   .theme-toggle {
-    width: 60px;
-    height: 32px;
-  }
-  .toggle-thumb {
-    width: 26px;
+    width: 48px;
     height: 26px;
   }
+  .toggle-thumb {
+    width: 20px;
+    height: 20px;
+  }
   [data-theme="dark"] .toggle-thumb {
-    transform: translateX(28px);
+    transform: translateX(22px);
   }
   .toggle-icon {
-    width: 16px;
-    height: 16px;
+    width: 13px;
+    height: 13px;
   }
 
   .nav.nav-collapsed {
