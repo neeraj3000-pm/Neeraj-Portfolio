@@ -257,18 +257,18 @@ body { padding-top: 96px; }
 
 .hero-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 1.05rem;
   color: var(--red);
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .hero-eyebrow::before {
   content: '';
-  width: 6px;
-  height: 6px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--red);
   display: inline-block;
@@ -368,7 +368,7 @@ body { padding-top: 96px; }
 
 .section-label {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 1.02rem;
   color: var(--red);
   margin-bottom: 12px;
 }
@@ -592,6 +592,14 @@ body { padding-top: 96px; }
   color: #2b2200;
 }
 
+.badge-monday {
+  background: #6161FF;
+}
+
+.badge-chatgpt {
+  background: #10A37F;
+}
+
 /* ============ ACHIEVEMENTS ============ */
 .achievements-list {
   display: grid;
@@ -620,6 +628,56 @@ body { padding-top: 96px; }
 .achievement-desc {
   color: var(--text-muted);
   font-size: 0.92rem;
+}
+
+/* ============ EDUCATION ============ */
+.education-list {
+  display: grid;
+  gap: 20px;
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.education-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--red);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.education-degree {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.education-school {
+  color: var(--red);
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+}
+
+.education-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
 /* ============ CONTACT ============ */
