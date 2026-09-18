@@ -567,10 +567,6 @@ body { padding-top: 96px; }
   filter: invert(1);
 }
 
-.icon-monday {
-  width: auto !important;
-}
-
 .tool-tag .badge {
   width: 16px;
   height: 16px;
