@@ -567,6 +567,10 @@ body { padding-top: 96px; }
   filter: invert(1);
 }
 
+.icon-monday {
+  width: auto !important;
+}
+
 .tool-tag .badge {
   width: 16px;
   height: 16px;
@@ -581,19 +585,6 @@ body { padding-top: 96px; }
   align-items: center;
   justify-content: center;
   letter-spacing: -0.02em;
-}
-
-.badge-excel {
-  background: #217346;
-}
-
-.badge-powerbi {
-  background: #F2C811;
-  color: #2b2200;
-}
-
-.badge-monday {
-  background: #6161FF;
 }
 
 .badge-chatgpt {
