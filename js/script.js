@@ -99,6 +99,47 @@ if (typewriterEl) {
   tick();
 }
 
+// ============ MOBILE NAV COLLAPSE ON SCROLL ============
+const nav = document.querySelector('.nav');
+const navExpandBtn = document.getElementById('navExpandBtn');
+const navLinkEls = document.querySelectorAll('.nav-links a');
+const NAV_COLLAPSE_THRESHOLD = 120;
+
+function isMobileNav() {
+  return window.matchMedia('(max-width: 640px)').matches;
+}
+
+let navManualExpand = false;
+
+function updateNavCollapse() {
+  if (!nav) return;
+  if (!isMobileNav()) {
+    nav.classList.remove('nav-collapsed');
+    return;
+  }
+  const pastThreshold = window.scrollY > NAV_COLLAPSE_THRESHOLD;
+  nav.classList.toggle('nav-collapsed', pastThreshold && !navManualExpand);
+}
+
+if (nav) {
+  window.addEventListener('resize', updateNavCollapse);
+
+  if (navExpandBtn) {
+    navExpandBtn.addEventListener('click', () => {
+      navManualExpand = true;
+      updateNavCollapse();
+    });
+  }
+
+  navLinkEls.forEach((link) => {
+    link.addEventListener('click', () => {
+      navManualExpand = false;
+    });
+  });
+
+  updateNavCollapse();
+}
+
 // ============ SCROLL PROGRESS BAR ============
 const scrollProgress = document.getElementById('scrollProgress');
 
@@ -110,8 +151,30 @@ function updateScrollProgress() {
   scrollProgress.style.width = pct + '%';
 }
 
-window.addEventListener('scroll', updateScrollProgress, { passive: true });
 updateScrollProgress();
+
+// ============ BATCHED SCROLL HANDLING ============
+// Nav collapse and the scroll progress bar both need to run on scroll.
+// Batching them into one requestAnimationFrame callback, instead of two
+// separate listeners each reading/writing layout on every raw scroll
+// event, keeps scrolling smooth rather than thrashing layout per-event.
+let scrollTicking = false;
+
+function onScrollFrame() {
+  if (window.scrollY <= NAV_COLLAPSE_THRESHOLD) {
+    navManualExpand = false;
+  }
+  updateNavCollapse();
+  updateScrollProgress();
+  scrollTicking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!scrollTicking) {
+    scrollTicking = true;
+    requestAnimationFrame(onScrollFrame);
+  }
+}, { passive: true });
 
 // ============ ACTIVE NAV LINK ON SCROLL ============
 const trackedSections = document.querySelectorAll('section[id]');

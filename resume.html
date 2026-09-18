@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Résumé — Neeraj P</title>
+<title>Résumé | Neeraj P</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,9 +22,31 @@
       <a href="index.html#skills">Skills</a>
       <a href="resume.html">Resume</a>
       <a href="index.html#contact">Contact</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-thumb">
+          <svg class="toggle-icon icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="12" y1="1.5" x2="12" y2="4"/>
+              <line x1="12" y1="20" x2="12" y2="22.5"/>
+              <line x1="1.5" y1="12" x2="4" y2="12"/>
+              <line x1="20" y1="12" x2="22.5" y2="12"/>
+              <line x1="4.5" y1="4.5" x2="6.3" y2="6.3"/>
+              <line x1="17.7" y1="17.7" x2="19.5" y2="19.5"/>
+              <line x1="4.5" y1="19.5" x2="6.3" y2="17.7"/>
+              <line x1="17.7" y1="6.3" x2="19.5" y2="4.5"/>
+            </g>
+          </svg>
+          <svg class="toggle-icon icon-bat" viewBox="0 0 240 100" fill="currentColor" aria-hidden="true">
+            <polygon points="5,38 30,24 70,22 95,24 105,3 120,20 135,3 145,24 170,22 210,24 235,38 215,50 195,68 175,52 150,58 133,48 120,82 107,48 90,58 65,52 45,68 25,50"/>
+          </svg>
+        </span>
+      </button>
     </div>
   </div>
+  <button class="nav-expand-btn" id="navExpandBtn" aria-label="Expand navigation">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <div class="container" style="padding-top: 56px; padding-bottom: 80px;">
@@ -32,7 +58,7 @@
 
   <div class="resume-block">
     <div class="resume-block-label">Summary</div>
-    <p style="color: var(--text-muted); max-width: 620px;">Product Manager with 2+ years of experience building AI-driven, workflow-centric platforms for enterprise clients. Engineering foundation (B.Tech ECE, VIT Vellore) combined with business and financial intuition (MBA, IIM Nagpur) — specializing in process automation, platform scalability, and cross-functional execution.</p>
+    <p style="color: var(--text-muted); max-width: 620px;">Product Manager with 2+ years of experience building AI-driven, workflow-centric platforms for enterprise clients. Engineering foundation (B.Tech ECE, VIT Vellore) combined with business and financial intuition (MBA, IIM Nagpur), specializing in process automation, platform scalability, and cross-functional execution.</p>
   </div>
 
   <div class="resume-block">
@@ -83,14 +109,14 @@
     <div class="resume-block-label">Education</div>
     <div class="resume-entry">
       <div class="resume-entry-top">
-        <span class="resume-entry-title">MBA — Strategy &amp; Marketing</span>
+        <span class="resume-entry-title">MBA: Strategy &amp; Marketing</span>
         <span class="resume-entry-date">07/2022 — 05/2024</span>
       </div>
       <div class="resume-entry-sub">Indian Institute of Management Nagpur</div>
     </div>
     <div class="resume-entry">
       <div class="resume-entry-top">
-        <span class="resume-entry-title">B.Tech — Electronics &amp; Communication</span>
+        <span class="resume-entry-title">B.Tech: Electronics &amp; Communication</span>
         <span class="resume-entry-date">04/2016 — 12/2020</span>
       </div>
       <div class="resume-entry-sub">Vellore Institute of Technology</div>
@@ -119,7 +145,7 @@
 </div>
 
 <footer>
-  © 2026 Neeraj P — Built from scratch, deployed with pride.
+  © 2026 Neeraj P. Built from scratch, deployed with pride.
 </footer>
 
 <div class="toast" id="achievementToast">

@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neeraj P — Product Manager</title>
-<meta name="description" content="Neeraj P — Product Manager building AI-driven, workflow-centric platforms for enterprise streaming clients.">
+<title>Neeraj P | Product Manager</title>
+<meta name="description" content="Neeraj P, Product Manager building AI-driven, workflow-centric platforms for enterprise streaming clients.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,9 +23,31 @@
       <a href="#skills" data-section="skills">Skills</a>
       <a href="resume.html">Resume</a>
       <a href="#contact" data-section="contact">Contact</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"></button>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="toggle-thumb">
+          <svg class="toggle-icon icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="12" y1="1.5" x2="12" y2="4"/>
+              <line x1="12" y1="20" x2="12" y2="22.5"/>
+              <line x1="1.5" y1="12" x2="4" y2="12"/>
+              <line x1="20" y1="12" x2="22.5" y2="12"/>
+              <line x1="4.5" y1="4.5" x2="6.3" y2="6.3"/>
+              <line x1="17.7" y1="17.7" x2="19.5" y2="19.5"/>
+              <line x1="4.5" y1="19.5" x2="6.3" y2="17.7"/>
+              <line x1="17.7" y1="6.3" x2="19.5" y2="4.5"/>
+            </g>
+          </svg>
+          <svg class="toggle-icon icon-bat" viewBox="0 0 240 100" fill="currentColor" aria-hidden="true">
+            <polygon points="5,38 30,24 70,22 95,24 105,3 120,20 135,3 145,24 170,22 210,24 235,38 215,50 195,68 175,52 150,58 133,48 120,82 107,48 90,58 65,52 45,68 25,50"/>
+          </svg>
+        </span>
+      </button>
     </div>
   </div>
+  <button class="nav-expand-btn" id="navExpandBtn" aria-label="Expand navigation">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <header class="hero container">
@@ -32,14 +58,17 @@
       <div class="hero-subtitle">
         <span id="typewriter"></span><span class="cursor"></span>
       </div>
-      <p class="lede">I turn messy, workflow-heavy problems into AI-driven products people actually use — building automation, analytics, and web + mobile experiences for streaming and media clients like JioStar, Disney, National Geographic, Star, and Colors.</p>
+      <p class="lede">I turn messy, workflow-heavy problems into AI-driven products people actually use, building automation, analytics, and web + mobile experiences for streaming and media clients like JioStar, Disney, National Geographic, Star, and Colors.</p>
       <div class="hero-cta">
         <a href="#experience" class="btn btn-primary">See my work</a>
         <a href="resume.html" class="btn btn-secondary">View résumé</a>
       </div>
     </div>
     <div class="hero-photo">
-      <img src="assets/images/profile.jpg" alt="Neeraj P">
+      <picture>
+        <source srcset="assets/images/profile.webp" type="image/webp">
+        <img src="assets/images/profile.jpg" alt="Neeraj P" fetchpriority="high">
+      </picture>
     </div>
   </div>
 </header>
@@ -48,9 +77,9 @@
   <div class="container">
     <div class="section-label reveal reveal-left">About</div>
     <div class="about-text reveal about-text-full">
-        <p>I've spent the last <strong>2+ years</strong> building products where the challenge usually isn't "build a feature" — it's making a complex process faster, simpler, and more scalable, while keeping the people using it at the center.</p>
-        <p>At <strong>Planetcast Media Services</strong>, I work on AI-driven Media Asset Management products used by major streaming and broadcast teams — including JioHotstar, Amazon Prime, Disney, National Geographic, Colors, and Star — across workflow automation, analytics, and web + mobile experiences. Before that, I got hands-on across the full product lifecycle at <strong>Desynova</strong>, and cut my teeth in data analytics at <strong>Atlas Copco Group</strong>.</p>
-        <p>My foundation spans engineering <strong>(B.Tech ECE, VIT Vellore)</strong> and business strategy <strong>(MBA, IIM Nagpur)</strong> — which mostly means I can move between technical constraints, customer problems, and business goals without missing a beat.</p>
+        <p>I've spent the last <strong>2+ years</strong> building products where the challenge usually isn't "build a feature." It's making a complex process faster, simpler, and more scalable, while keeping the people using it at the center.</p>
+        <p>At <strong>Planetcast Media Services</strong>, I work on AI-driven Media Asset Management products used by major streaming and broadcast teams, including JioHotstar, Amazon Prime, Disney, National Geographic, Colors, and Star, across workflow automation, analytics, and web + mobile experiences. Before that, I got hands-on across the full product lifecycle at <strong>Desynova</strong>, and cut my teeth in data analytics at <strong>Atlas Copco Group</strong>.</p>
+        <p>My foundation spans engineering <strong>(B.Tech ECE, VIT Vellore)</strong> and business strategy <strong>(MBA, IIM Nagpur)</strong>, which mostly means I can move between technical constraints, customer problems, and business goals without missing a beat.</p>
       </div>
     <div class="stat-strip reveal-stagger">
       <div class="stat reveal">
@@ -85,7 +114,7 @@
           <span class="pipeline-date">Apr 2025 — Present</span>
         </div>
         <div class="pipeline-company">Planetcast Media Services</div>
-        <p class="pipeline-desc">Own 0→1 development of AI-driven MAM capabilities for enterprise streaming and broadcast clients including JioHotstar — partnering with AI/ML, Android, and iOS engineers to ship workflow automation across web and mobile. Built a live analytics dashboard giving leadership real-time visibility into platform activity, and led the 2026 migration scaling premium formats (4K, HDR, Dolby Vision/Atmos) while cutting publishing TAT by 15%.</p>
+        <p class="pipeline-desc">Own 0→1 development of AI-driven MAM capabilities for enterprise streaming and broadcast clients including JioHotstar, partnering with AI/ML, Android, and iOS engineers to ship workflow automation across web and mobile. Built a live analytics dashboard giving leadership real-time visibility into platform activity, and led the 2026 migration scaling premium formats (4K, HDR, Dolby Vision/Atmos) while cutting publishing TAT by 15%.</p>
         <div class="pipeline-metrics">
           <span class="metric-chip"><b>3,000+/day</b> assets</span>
           <span class="metric-chip"><b>180→30 min</b> decisions</span>
@@ -101,7 +130,7 @@
           <span class="pipeline-date">Jan 2024 — Apr 2025</span>
         </div>
         <div class="pipeline-company">Desynova</div>
-        <p class="pipeline-desc">Led GenAI-powered subtitle generation for regional content — working directly with AI/ML engineers on model accuracy and throughput, while running sprints as Scrum Master. Ran competitor research and customer discovery, then shipped low-code configuration that cut engineering dependency for enterprise customizations.</p>
+        <p class="pipeline-desc">Led GenAI-powered subtitle generation for regional content, working directly with AI/ML engineers on model accuracy and throughput, while running sprints as Scrum Master. Ran competitor research and customer discovery, then shipped low-code configuration that cut engineering dependency for enterprise customizations.</p>
         <div class="pipeline-metrics">
           <span class="metric-chip"><b>20%</b> accuracy ↑</span>
           <span class="metric-chip"><b>15%</b> throughput ↑</span>
@@ -142,18 +171,30 @@
           <span class="skill-tag">Competitive Analysis</span>
           <span class="skill-tag">A/B Testing</span>
           <span class="skill-tag">User Experience Design</span>
+          <span class="skill-tag">Data Analysis</span>
+          <span class="skill-tag">Customer Feedback Analysis</span>
+          <span class="skill-tag">Cross-functional Team Leadership</span>
+          <span class="skill-tag">Prototyping</span>
+          <span class="skill-tag">Product Demos</span>
+          <span class="skill-tag">PRDs &amp; Documentation</span>
+          <span class="skill-tag">Stakeholder Management</span>
+          <span class="skill-tag">AI/ML Product Collaboration</span>
         </div>
       </div>
       <div class="reveal">
         <div class="skill-group-label">Tools</div>
         <div class="skill-tags">
-          <span class="tool-tag"><img src="https://cdn.simpleicons.org/jira/e3272c" alt=""> Jira</span>
-          <span class="tool-tag"><img src="https://cdn.simpleicons.org/figma/e3272c" alt=""> Figma</span>
-          <span class="tool-tag"><img src="https://cdn.simpleicons.org/miro/e3272c" alt=""> Miro</span>
-          <span class="tool-tag"><img src="https://cdn.simpleicons.org/notion/e3272c" alt=""> Notion</span>
-          <span class="tool-tag"><span class="badge">PBI</span> Power BI</span>
-          <span class="tool-tag"><span class="badge">SQL</span> SQL</span>
-          <span class="tool-tag"><span class="badge">XL</span> Excel</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/icons/jira.svg" alt=""> Jira</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/icons/figma.svg" alt=""> Figma</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/icons/miro.svg" alt=""> Miro</span>
+          <span class="tool-tag"><img loading="lazy" class="icon-invert-dark" src="assets/icons/notion.svg" alt=""> Notion</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/images/visio-logo.webp" alt=""> Visio</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/images/powerbi-logo.webp" alt=""> Power BI</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/images/sql-logo.webp" alt=""> SQL</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/images/excel-logo.webp" alt=""> Excel</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/icons/claude.svg" alt=""> Claude</span>
+          <span class="tool-tag"><img loading="lazy" src="assets/images/monday-logo.webp" alt=""> monday.com</span>
+          <span class="tool-tag"><img loading="lazy" class="icon-invert-dark" src="assets/images/chatgpt-logo.webp" alt=""> ChatGPT</span>
         </div>
       </div>
     </div>
@@ -166,17 +207,79 @@
     <h2 class="reveal reveal-left">Things I have achieved.</h2>
     <div class="achievements-list reveal-stagger">
       <div class="achievement reveal">
+        <div class="achievement-icon">🚀</div>
+        <div>
+          <div class="achievement-title">Enterprise Delivery Workflow Transformation (2026)</div>
+          <div class="achievement-desc">Led a cross-functional migration enabling 4K, HDR, and Dolby Vision/Atmos support while cutting publishing TAT by 15%.</div>
+        </div>
+      </div>
+      <div class="achievement reveal">
+        <div class="achievement-icon">📈</div>
+        <div>
+          <div class="achievement-title">Improved GenAI Subtitles (2025)</div>
+          <div class="achievement-desc">Scaled GenAI-powered subtitle workflows for regional content, lifting accuracy 20% and throughput 15%.</div>
+        </div>
+      </div>
+      <div class="achievement reveal">
         <div class="achievement-icon">🏅</div>
         <div>
-          <div class="achievement-title">National Finalist — IDFC FIRST Bank FAME 3.0 (2024)</div>
+          <div class="achievement-title">National Finalist: IDFC FIRST Bank FAME 3.0 (2024)</div>
           <div class="achievement-desc">Top 10 of 3,000+ applicants for a highway safety solution design.</div>
         </div>
       </div>
       <div class="achievement reveal">
         <div class="achievement-icon">📄</div>
         <div>
-          <div class="achievement-title">Published ML Research — IJITEE (2020)</div>
+          <div class="achievement-title">Published ML Research Paper: IJITEE (2020)</div>
           <div class="achievement-desc">98% accuracy differentiating normal and cystic ovaries using ML algorithms.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="certifications">
+  <div class="container">
+    <div class="section-label reveal reveal-left">Certifications</div>
+    <h2 class="reveal reveal-left">Keeping the fundamentals sharp.</h2>
+    <div class="achievements-list reveal-stagger">
+      <div class="achievement reveal">
+        <div class="achievement-icon">📊</div>
+        <div>
+          <div class="achievement-title">Power BI Essential Training</div>
+          <div class="achievement-desc">Mastered Power BI essentials for data insights and data visualization.</div>
+        </div>
+      </div>
+      <div class="achievement reveal">
+        <div class="achievement-icon">🎯</div>
+        <div>
+          <div class="achievement-title">Six Sigma Green Belt</div>
+          <div class="achievement-desc">Studied Lean and Quality Control tools to analyze and improve operations processes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="education">
+  <div class="container">
+    <div class="section-label reveal reveal-left">Education</div>
+    <h2 class="reveal reveal-left">The foundation.</h2>
+    <div class="education-list reveal-stagger">
+      <div class="education-item reveal">
+        <div class="education-logo"><img loading="lazy" src="assets/images/iim-nagpur-logo.webp" alt="IIM Nagpur"></div>
+        <div>
+          <div class="education-degree">MBA, Strategy &amp; Marketing</div>
+          <div class="education-school">Indian Institute of Management Nagpur</div>
+          <div class="education-date">Jul 2022 — May 2024</div>
+        </div>
+      </div>
+      <div class="education-item reveal">
+        <div class="education-logo"><img loading="lazy" src="assets/images/vit-logo.webp" alt="VIT Vellore"></div>
+        <div>
+          <div class="education-degree">B.Tech, Electronics &amp; Communication</div>
+          <div class="education-school">Vellore Institute of Technology</div>
+          <div class="education-date">Apr 2016 — Dec 2020</div>
         </div>
       </div>
     </div>
@@ -187,7 +290,7 @@
   <div class="container">
     <div class="section-label reveal reveal-left">Contact</div>
     <h2 class="reveal reveal-left">Let's talk</h2>
-    <p class="reveal" style="color: var(--text-muted); max-width: 500px;">I'm open to product roles where I can help build, ship, and improve what your team is working on — from messy 0→1 problems to scaling what already works. If you want someone who moves comfortably between engineering, business, and the people actually using the product, let's talk.</p>    <div class="contact-links reveal-stagger">
+    <p class="reveal" style="color: var(--text-muted); max-width: 500px;">I'm open to product roles where I can help build, ship, and improve what your team is working on, from messy 0→1 problems to scaling what already works. If you want someone who moves comfortably between engineering, business, and the people actually using the product, let's talk.</p>    <div class="contact-links reveal-stagger">
       <a href="mailto:prabukumar.neeraj@gmail.com" class="contact-link reveal">
         <div>
           <div class="contact-link-label">EMAIL</div>
@@ -205,7 +308,7 @@
 </section>
 
 <footer>
-  © 2026 Neeraj P — Built from scratch, deployed with pride.
+  © 2026 Neeraj P. Built from scratch, deployed with pride.
 </footer>
 
 <div class="toast" id="achievementToast">
