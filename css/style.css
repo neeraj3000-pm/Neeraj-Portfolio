@@ -563,7 +563,7 @@ body { padding-top: 96px; }
   flex-shrink: 0;
 }
 
-[data-theme="dark"] .icon-notion {
+[data-theme="dark"] .icon-invert-dark {
   filter: invert(1);
 }
 
