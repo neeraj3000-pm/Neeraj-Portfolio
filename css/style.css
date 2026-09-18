@@ -651,16 +651,20 @@ body { padding-top: 96px; }
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: var(--red);
-  color: #fff;
+  background: #ffffff;
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
   flex-shrink: 0;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.education-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .education-degree {
