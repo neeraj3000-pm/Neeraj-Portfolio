@@ -642,12 +642,19 @@ body { padding-top: 96px; }
   justify-content: center;
 }
 
-.project-media img {
+.project-shot {
   width: 100%;
-  max-width: 260px;
+  max-width: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 44px rgba(0,0,0,0.3);
+}
+
+.project-shot img {
+  width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.25));
 }
 
 .project-eyebrow {
@@ -849,8 +856,8 @@ footer {
     padding: 32px;
     gap: 28px;
   }
-  .project-media img {
-    max-width: 220px;
+  .project-shot {
+    max-width: 200px;
   }
 }
 
