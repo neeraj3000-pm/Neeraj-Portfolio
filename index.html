@@ -21,6 +21,7 @@
     <div class="nav-links">
       <a href="#experience" data-section="experience">Experience</a>
       <a href="#skills" data-section="skills">Skills</a>
+      <a href="#projects" data-section="projects">Projects</a>
       <a href="resume.html">Resume</a>
       <a href="#contact" data-section="contact">Contact</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -232,6 +233,43 @@
         <div>
           <div class="achievement-title">Published ML Research Paper: IJITEE (2020)</div>
           <div class="achievement-desc">98% accuracy differentiating normal and cystic ovaries using ML algorithms.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-label reveal reveal-left">Side Projects</div>
+    <h2 class="reveal reveal-left">Something I shipped, not just scoped.</h2>
+    <div class="project-card reveal">
+      <div class="project-banner">
+        <picture>
+          <source srcset="assets/images/syncup-banner.webp" type="image/webp">
+          <img src="assets/images/syncup-banner.jpg" alt="SyncUp landing page: 'Stop debating. SyncUp! Swipe. Match. Stop arguing.' with a phone showing a movie match card at a 92% Sync Score" loading="lazy" width="1100" height="560">
+        </picture>
+      </div>
+      <div class="project-body">
+        <div class="project-eyebrow">Live product · Built solo, end to end</div>
+        <h3 class="project-title">SyncUp</h3>
+        <p class="project-desc">My wife and I could never agree on what to watch or where to eat. Every night turned into the same "I don't know, you pick," so I built something to end it. Everyone in the group swipes privately on the same options, and whoever matches the most wins, no more back and forth. It worked well enough that I scaled it past the two of us: friend groups, roommates, and family trips of up to 10 people now use it to stop arguing too.</p>
+        <div class="project-metrics">
+          <span class="metric-chip"><b>2-10</b> people per session</span>
+          <span class="metric-chip"><b>10s</b> to start, no account</span>
+          <span class="metric-chip"><b>16</b> analytics events tracked</span>
+        </div>
+        <div class="project-stack">
+          <span class="metric-chip">Next.js</span>
+          <span class="metric-chip">TypeScript</span>
+          <span class="metric-chip">Supabase</span>
+          <span class="metric-chip">TMDB API</span>
+          <span class="metric-chip">Google Places API</span>
+          <span class="metric-chip">PostHog</span>
+        </div>
+        <div class="project-cta">
+          <a href="https://sync-up-nine.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Try SyncUp <span aria-hidden="true">→</span></a>
+          <a href="https://sync-up-nine.vercel.app/about" target="_blank" rel="noopener" class="btn btn-secondary">Read the build story</a>
         </div>
       </div>
     </div>
