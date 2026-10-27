@@ -807,6 +807,8 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
 }
 
+.contact-link-value span { white-space: nowrap; }
+
 /* ============ FOOTER ============ */
 footer {
   padding: 40px 0;
