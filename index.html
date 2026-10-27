@@ -6,10 +6,11 @@
 <title>Neeraj P | Product Manager</title>
 <meta name="description" content="Neeraj P, Product Manager building AI-driven, workflow-centric platforms for enterprise streaming clients.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap">
+<link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -67,8 +68,8 @@
     </div>
     <div class="hero-photo">
       <picture>
-        <source srcset="assets/images/profile.webp" type="image/webp">
-        <img src="assets/images/profile.jpg" alt="Neeraj P" fetchpriority="high">
+        <source type="image/webp" srcset="assets/images/profile-300.webp 300w, assets/images/profile-600.webp 600w, assets/images/profile-900.webp 900w" sizes="(max-width: 640px) 280px, 290px">
+        <img src="assets/images/profile.jpg" alt="Neeraj P" width="900" height="910" fetchpriority="high">
       </picture>
     </div>
   </div>
@@ -77,8 +78,8 @@
 <section class="section" id="about">
   <div class="container">
     <div class="section-label reveal reveal-left">About</div>
-    <div class="about-text reveal about-text-full">
-        <p>I've spent the last <strong>2+ years</strong> building products where the challenge usually isn't "build a feature." It's making a complex process faster, simpler, and more scalable, while keeping the people using it at the center.</p>
+    <div class="about-text reveal">
+        <p>I've spent nearly <strong>3 years</strong> building products where the challenge usually isn't "build a feature." It's making a complex process faster, simpler, and more scalable, while keeping the people using it at the center.</p>
         <p>At <strong>Planetcast Media Services</strong>, I work on AI-driven Media Asset Management products used by major streaming and broadcast teams, including JioHotstar, Amazon Prime, Disney, National Geographic, Colors, and Star, across workflow automation, analytics, and web + mobile experiences. Before that, I got hands-on across the full product lifecycle at <strong>Desynova</strong>, and cut my teeth in data analytics at <strong>Atlas Copco Group</strong>.</p>
         <p>My foundation spans engineering <strong>(B.Tech ECE, VIT Vellore)</strong> and business strategy <strong>(MBA, IIM Nagpur)</strong>, which mostly means I can move between technical constraints, customer problems, and business goals without missing a beat.</p>
       </div>
@@ -334,14 +335,15 @@
   <div class="container">
     <div class="section-label reveal reveal-left">Contact</div>
     <h2 class="reveal reveal-left">Let's talk</h2>
-    <p class="reveal" style="color: var(--text-muted); max-width: 500px;">I'm open to product roles where I can help build, ship, and improve what your team is working on, from messy 0→1 problems to scaling what already works. If you want someone who moves comfortably between engineering, business, and the people actually using the product, let's talk.</p>    <div class="contact-links reveal-stagger">
+    <p class="contact-intro reveal">I'm open to product roles where I can help build, ship, and improve what your team is working on, from messy 0→1 problems to scaling what already works. If you want someone who moves comfortably between engineering, business, and the people actually using the product, let's talk.</p>
+    <div class="contact-links reveal-stagger">
       <a href="mailto:prabukumar.neeraj@gmail.com" class="contact-link reveal">
         <div>
           <div class="contact-link-label">EMAIL</div>
           <div class="contact-link-value">prabukumar.neeraj@gmail.com</div>
         </div>
       </a>
-      <a href="https://www.linkedin.com/in/neeraj-p-9b0741138" target="_blank" class="contact-link reveal">
+      <a href="https://www.linkedin.com/in/neeraj-p-9b0741138" target="_blank" rel="noopener" class="contact-link reveal">
         <div>
           <div class="contact-link-label">LINKEDIN</div>
           <div class="contact-link-value">linkedin.com/in/neeraj-p</div>
@@ -355,11 +357,10 @@
   © 2026 Neeraj P. Built from scratch, deployed with pride.
 </footer>
 
-<div class="toast" id="achievementToast">
-  <span class="toast-title" id="toastTitle">WASTED</span>
-  <span class="toast-desc" id="toastText">Can't handle the dark side.</span>
+<div class="toast" id="achievementToast" aria-hidden="true">
+  <span class="toast-title">ACHIEVEMENT UNLOCKED</span>
+  <span class="toast-desc">Welcome to the dark side.</span>
 </div>
 
-<script src="js/script.js"></script>
 </body>
 </html>
