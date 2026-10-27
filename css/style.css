@@ -672,6 +672,33 @@ body { padding-top: 96px; }
   max-width: 560px;
 }
 
+.project-principles {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  max-width: 560px;
+}
+
+.project-principles li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.project-principles li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+}
+
 .project-metrics,
 .project-stack {
   display: flex;
@@ -919,6 +946,11 @@ footer {
   color: var(--red);
   font-size: 0.9rem;
   margin-bottom: 10px;
+}
+
+.resume-entry-sub a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .resume-entry ul {
