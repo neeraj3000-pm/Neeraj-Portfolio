@@ -4,11 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Résumé | Neeraj P</title>
+<meta name="description" content="Résumé of Neeraj P, Product Manager shipping AI-driven, workflow-centric platforms for enterprise streaming clients like JioHotstar and Disney.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Press+Start+2P&display=swap">
+<link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/style.css">
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<script src="js/script.js" defer></script>
 </head>
 <body>
 
@@ -50,7 +52,7 @@
   </button>
 </nav>
 
-<div class="container" style="padding-top: 56px; padding-bottom: 80px;">
+<div class="container resume-page">
 
   <div class="resume-header">
     <h1>Résumé</h1>
@@ -59,7 +61,7 @@
 
   <div class="resume-block">
     <div class="resume-block-label">Summary</div>
-    <p style="color: var(--text-muted); max-width: 620px;">Engineer by training, strategist by degree, product manager by trade. ~3 years shipping AI-driven, workflow-centric platforms for enterprise clients like JioHotstar and Disney: automating processes, scaling platforms, and delivering reliably at scale. Now taking the same rigor to solo, AI-native 0→1 builds (SyncUp).</p>
+    <p class="resume-summary">Engineer by training, strategist by degree, product manager by trade. ~3 years shipping AI-driven, workflow-centric platforms for enterprise clients like JioHotstar and Disney: automating processes, scaling platforms, and delivering reliably at scale. Now taking the same rigor to solo, AI-native 0→1 builds (SyncUp).</p>
   </div>
 
   <div class="resume-block">
@@ -143,24 +145,24 @@
 
   <div class="resume-block">
     <div class="resume-block-label">Key Achievements</div>
-    <ul class="resume-entry" style="list-style: none; margin-top: 0; padding-left: 0;">
-      <li style="margin-bottom: 8px;"><strong>National Finalist (Top 10 of 3,000+), IDFC FIRST Bank FAME 3.0 (2024):</strong> <span style="color: var(--text-muted);">innovative highway-safety solution design.</span></li>
-      <li><strong>ML Research Paper (2020):</strong> <span style="color: var(--text-muted);">98% accuracy differentiating normal vs. cystic ovaries using ML; accepted into the IJITEE journal.</span></li>
+    <ul class="resume-entry resume-list">
+      <li><strong>National Finalist (Top 10 of 3,000+), IDFC FIRST Bank FAME 3.0 (2024):</strong> <span>innovative highway-safety solution design.</span></li>
+      <li><strong>ML Research Paper (2020):</strong> <span>98% accuracy differentiating normal vs. cystic ovaries using ML; accepted into the IJITEE journal.</span></li>
     </ul>
   </div>
 
   <div class="resume-block">
     <div class="resume-block-label">Certifications</div>
-    <ul class="resume-entry" style="list-style: none; margin-top: 0; padding-left: 0;">
-      <li style="margin-bottom: 8px;"><strong>Six Sigma Green Belt:</strong> <span style="color: var(--text-muted);">Lean and Quality Control tools.</span></li>
-      <li><strong>Power BI Essential Training:</strong> <span style="color: var(--text-muted);">data insights and visualization.</span></li>
+    <ul class="resume-entry resume-list">
+      <li><strong>Six Sigma Green Belt:</strong> <span>Lean and Quality Control tools.</span></li>
+      <li><strong>Power BI Essential Training:</strong> <span>data insights and visualization.</span></li>
     </ul>
   </div>
 
   <div class="resume-block">
     <div class="resume-block-label">Skills</div>
     <div class="skill-group-label">Product &amp; Strategy</div>
-    <div class="skill-tags" style="margin-bottom: 20px;">
+    <div class="skill-tags resume-skill-group">
       <span class="skill-tag">Product Roadmapping</span>
       <span class="skill-tag">Agile &amp; Scrum</span>
       <span class="skill-tag">Go-to-Market Strategy</span>
@@ -197,11 +199,10 @@
   © 2026 Neeraj P. Built from scratch, deployed with pride.
 </footer>
 
-<div class="toast" id="achievementToast">
-  <span class="toast-title" id="toastTitle">WASTED</span>
-  <span class="toast-desc" id="toastText">Can't handle the dark side.</span>
+<div class="toast" id="achievementToast" aria-hidden="true">
+  <span class="toast-title">ACHIEVEMENT UNLOCKED</span>
+  <span class="toast-desc">Welcome to the dark side.</span>
 </div>
 
-<script src="js/script.js"></script>
 </body>
 </html>
