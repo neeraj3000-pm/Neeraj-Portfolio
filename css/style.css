@@ -631,6 +631,10 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
+.project-card + .project-card {
+  margin-top: 32px;
+}
+
 .project-banner {
   border-bottom: 1px solid var(--border);
 }
