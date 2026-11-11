@@ -243,7 +243,7 @@
 <section class="section" id="projects">
   <div class="container">
     <div class="section-label reveal reveal-left">Side Projects</div>
-    <h2 class="reveal reveal-left">Something I shipped, not just scoped.</h2>
+    <h2 class="reveal reveal-left">Things I shipped, not just scoped.</h2>
     <div class="project-card reveal">
       <div class="project-banner">
         <picture>
@@ -277,6 +277,42 @@
         <div class="project-cta">
           <a href="https://sync-up-nine.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Try SyncUp <span aria-hidden="true">→</span></a>
           <a href="https://sync-up-nine.vercel.app/about" target="_blank" rel="noopener" class="btn btn-secondary">Read the build story</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-banner">
+        <picture>
+          <source srcset="assets/images/shipped-banner.webp" type="image/webp">
+          <img src="assets/images/shipped-banner.jpg" alt="Shipped: Claude drafts release notes for each client; Shipped routes them through approval." loading="lazy" width="1600" height="739">
+        </picture>
+      </div>
+      <div class="project-body">
+        <div class="project-eyebrow">Live product · PRD to production, solo</div>
+        <h3 class="project-title">Shipped</h3>
+        <p class="project-desc">Every sprint I turn Jira tickets into release notes for each of our broadcast clients, and my manager reviews them before they go out. Shipped is the tool I wished I had: your own Claude drafts one version per client through an MCP connector, your team edits and approves it, and every client gets a private link with their full release history. There's no AI inside the app. The customer's Claude does the writing, and Shipped makes it safe to send.</p>
+        <ul class="project-principles">
+          <li>Authored the PRD and directed AI-paired engineering (Claude Code) solo, end to end</li>
+          <li>Designed a 6-tool MCP contract where Claude can draft and revise but never approve; sign-off stays a human action</li>
+          <li>Built a role-based approval flow (Draft → In review → Approved → Sent) where any edit after approval re-opens review</li>
+          <li>Chose a "no AI inside" model: the customer's own Claude pays for the writing, so running costs are just hosting and a database</li>
+        </ul>
+        <div class="project-metrics">
+          <span class="metric-chip"><b>6</b> MCP tools for Claude</span>
+          <span class="metric-chip"><b>0</b> AI SDKs inside</span>
+          <span class="metric-chip"><b>1</b> private link per client</span>
+        </div>
+        <div class="project-stack">
+          <span class="metric-chip">Next.js</span>
+          <span class="metric-chip">TypeScript</span>
+          <span class="metric-chip">Supabase</span>
+          <span class="metric-chip">MCP</span>
+          <span class="metric-chip">Tailwind</span>
+          <span class="metric-chip">Vercel</span>
+        </div>
+        <div class="project-cta">
+          <a href="https://shipped-release-notes.vercel.app/login" target="_blank" rel="noopener" class="btn btn-primary">Try Shipped <span aria-hidden="true">→</span></a>
+          <a href="https://shipped-release-notes.vercel.app/about" target="_blank" rel="noopener" class="btn btn-secondary">Read the build story</a>
         </div>
       </div>
     </div>
