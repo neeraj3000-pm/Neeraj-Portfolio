@@ -61,7 +61,7 @@
 
   <div class="resume-block">
     <div class="resume-block-label">Summary</div>
-    <p class="resume-summary">Engineer by training, strategist by degree, product manager by trade. ~3 years shipping AI-driven, workflow-centric platforms for enterprise clients like JioHotstar and Disney: automating processes, scaling platforms, and delivering reliably at scale. Now taking the same rigor to solo, AI-native 0→1 builds (SyncUp).</p>
+    <p class="resume-summary">Engineer by training, strategist by degree, product manager by trade. ~3 years shipping AI-driven, workflow-centric platforms for enterprise clients like JioHotstar and Disney: automating processes, scaling platforms, and delivering reliably at scale. Now taking the same rigor to solo, AI-native 0→1 builds (SyncUp, Shipped).</p>
   </div>
 
   <div class="resume-block">
@@ -102,8 +102,7 @@
       </div>
       <div class="resume-entry-sub">Atlas Copco Group · Pune</div>
       <ul>
-        <li>Built a Kirkpatrick-model system to measure training effectiveness, surfacing KPIs across its three levels to the L&amp;D division.</li>
-        <li>Designed Power BI dashboards giving stakeholders live access to training data.</li>
+        <li>Built a Kirkpatrick-model training-effectiveness system across ~25 programs, defining KPIs at all three levels with L&amp;D; live Power BI dashboards let leadership track program performance and refine courses based on response.</li>
       </ul>
     </div>
   </div>
@@ -117,10 +116,22 @@
       </div>
       <div class="resume-entry-sub">Solo-built decision app for groups of 2–10, ranked by a "Sync Score" · <a href="https://sync-up-nine.vercel.app/" target="_blank" rel="noopener">Live app</a></div>
       <ul>
-        <li>Conceived, scoped, and shipped SyncUp solo, end to end: authored the PRD, designed the data model, and directed AI-paired engineering (Claude Code) to a live production app.</li>
+        <li>Conceived, scoped, and shipped SyncUp solo, end to end: authored the PRD (decision-layer scope, 10-second landing rule, accessibility requirements), designed the data model, and directed AI-paired engineering (Claude Code) to a live production app.</li>
         <li>Architected a category-agnostic data model and matching algorithm (independent swipes ranked into a "Sync Score"), built to extend from 2 launch categories to 5 more without re-architecture.</li>
-        <li>Set product principles in the PRD: scoped SyncUp as a decision layer that hands off to existing inventory, enforced a 10-second landing rule, and specified accessibility (button alternative to every swipe, reduced motion, contrast-checked themes).</li>
-        <li>Instrumented a 16-event PostHog analytics taxonomy and shipped an automated 48h/7d/30d data-retention policy pre-launch, applying enterprise-grade requirements discipline to a self-directed 0→1 build.</li>
+        <li>Instrumented a 16-event PostHog analytics taxonomy and shipped an automated 48h/7d/30d data-retention policy before launch.</li>
+      </ul>
+    </div>
+    <div class="resume-entry">
+      <div class="resume-entry-top">
+        <span class="resume-entry-title">Shipped</span>
+        <span class="resume-entry-date">2026</span>
+      </div>
+      <div class="resume-entry-sub">AI-native release-notes platform for B2B teams · <a href="https://shipped-release-notes.vercel.app/login?ref=portfolio" target="_blank" rel="noopener">Live demo</a></div>
+      <ul>
+        <li>Shipped a live MCP server and web app solo, from PRD to production, that lets any team's own Claude turn sprint tickets into client-specific, manager-approved release notes; directed AI-paired engineering (Claude Code).</li>
+        <li>Designed a "bring-your-own-AI" model: customers connect their own Claude through a 6-tool MCP server while the app ships with zero AI dependencies, keeping marginal cost to hosting and a database.</li>
+        <li>Encoded trust as product rules: Claude can draft but never approve, any edit after approval re-opens review, every line keeps its Jira ticket ID, and clients see only approved notes on a private link.</li>
+        <li>Cut page loads ~4× (2.4s → 0.6s) by profiling latency, co-locating compute with the database, and removing a per-request auth call.</li>
       </ul>
     </div>
   </div>
@@ -188,6 +199,8 @@
       <span class="skill-tag">SQL</span>
       <span class="skill-tag">Excel</span>
       <span class="skill-tag">Claude Code</span>
+      <span class="skill-tag">MCP</span>
+      <span class="skill-tag">Supabase</span>
       <span class="skill-tag">monday.com</span>
       <span class="skill-tag">ChatGPT</span>
     </div>
